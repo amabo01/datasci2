@@ -1,0 +1,20 @@
+import pandas as pd
+
+df = pd.read_csv("adult.csv")
+print(df.groupby(["class"]).median())
+print(df.groupby(["class"]).std())
+print(df.corr())
+
+df2 = pd.read_csv("car.csv")
+#1-4 low to vhigh, 0/1 acc/unacc
+df2.replace(to_replace =["vhigh"], value ="4")
+df2.replace(to_replace =["high"], value ="3")
+df2.replace(to_replace =["med"], value ="2")
+df2.replace(to_replace =["low"], value ="1")
+df2.replace(to_replace =["acc"], value ="0")
+df2.replace(to_replace =["unacc"], value ="1")
+print(df2.corr())
+
+df3 = pd.read_csv("iris.csv")
+print(df3.groupby(["Petal_length","Petal_width"]).median())
+print(df3.corr())
