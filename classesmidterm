@@ -1,0 +1,69 @@
+import math
+class Employee:
+	def __init__(self, name, YearofJoining, address):
+		self.name = name
+		self.YearofJoining = YearofJoining
+		self.address = address
+	def getInfo(self, workhrs, salary):
+		self.workhrs = workhrs
+		self.salary = salary
+		
+	def AddSal(self, salary):
+		self.salary = salary
+		if salary < 500:
+			salary = salary + 10
+	def AddWork(self, workhrs, salary):
+		self.salary = salary
+		if workhrs > 6:
+			salary = salary + 5
+	def printEmployeeInfo(self, name, YearofJoining, salary, address):
+		self.name = name
+		self.YearofJoining = YearofJoining
+		self.address = address
+		self.salary = salary
+		print(name + YearofJoining + salary + address)
+
+employee1 = Employee("Afanwi", "2021", "2530 sugartx")
+employee1.getInfo(7, 2300)
+employee1.AddSal(2300)
+employee1.AddWork(7, 2300)
+employee1.printEmployeeInfo("name ", "YearofJoining ", "salary ", "address")
+employee1.printEmployeeInfo("afanwi ", "2021 ", "2300 ", "2530 sugartx")
+
+class Shape:
+	def __init__(self):
+		pass
+	def areamethod(self):
+		pass
+class Triangle(Shape):
+	def __init__(self, a, b, C):
+		self.a = a
+		self.b = b
+		self.C = C *(math.pi/180)
+	def area(self):
+		print("Triangle Area: " + str(round(((self.a *self.b)* math.sin(self.C))/2,2))+ "cm^2")
+	def perimeter(self):
+		print("Triangle Perimeter: " + str(round(self.a + self.b + self.C, 2)) +"cm")
+
+tri1 = Triangle(6.3, 7, 59)
+tri1.area()
+tri1.perimeter()
+
+class Rectangle(Shape):
+	def __init__(self, height, width):
+		self.height = height
+		self.width = width
+	def area(self):
+		print("Rectangle Area: " + str(self.height 
+* self.width)+ "cm")
+	def perimeter(self):
+		print("Rectangle Perimeter: " + str(2*self.width + 2*self.height) +"cm")
+
+rect1 = Rectangle(10, 8)
+rect1.area()
+rect1.perimeter()
+
+print(math.sin(30))
+print(math.sin(45))
+print(math.sin(90))
+print(math.sin(180))
