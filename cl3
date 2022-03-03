@@ -1,0 +1,25 @@
+import numpy as np
+import statistics as stats
+class GradeStatistics:
+	def __init__(self, data):
+		self.data = data
+	def mean(self):
+		return np.mean(self.data)
+	def median(self):
+		return np.median(self.data)
+	def standarddev(self):
+		return np.std(self.data)
+	def mode(self):
+		return stats.mode(self.data)
+	def variance(self):
+		return np.var(self.data)
+
+matrix = GradeStatistics(np.random.uniform(0.0, 100.0, 5))
+print(matrix)
+print(matrix.mean())
+print(matrix.median())
+print(matrix.standarddev())
+print(matrix.mode())
+print(matrix.variance())
+
+#These stats are necessary to analyze how well the class did on the assignment.
