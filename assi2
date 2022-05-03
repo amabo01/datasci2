@@ -1,0 +1,20 @@
+import numpy as np
+
+#Q1
+a = np.random.randint(1,50,(100,10))
+print(a)
+print("The mean for this array is " + str(a.mean()))
+print("The median for this array is " + str(np.median(a)))
+print("The max for this array is " + str(np.amax(a)))
+print("The standard deviation for this array is " + str(np.std(a)))
+
+#Q2
+b = np.random.randint(1,50,(1000,))
+print(b)
+print(b[0:11])
+print(b[-12:-1])
+print(np.var(b))
+
+#Q3
+f = open('US_population.txt', 'r')
+print(f.read())
