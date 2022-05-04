@@ -1,0 +1,24 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.arange(0,4*np.pi,0.1) 
+y1 = 2*np.sin(x)
+y2 = 2*np.cos(x)
+plt.plot(x, y1)
+plt.plot(x, y2, '--')
+plt.xlabel('x values') 
+plt.ylabel('y values')
+plt.legend(['2sin(x)', '2cos(x)']) 
+plt.show()
+
+#Q2
+A = np.random.rand(1000) * 100
+B = np.random.normal(50, 10, 1000)
+#print(A)
+#print(B)
+#A is printing a random float 100 times
+#B is printing a 50x10 matrix of 1000 numbers with values between 0 and 1
+print("mean of A " + str(np.average(A)))
+print("mean of B " + str(np.average(B)))
+print("std of A " + str(np.std(A)))
+print("std of B " + str(np.std(B)))
